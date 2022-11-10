@@ -38,28 +38,28 @@ public class Str {
         System.out.println("Letters" + b.toUpperCase());
 
     }
-    public static void contain(){
-        if (text.contains("abc") || text.contains("ABC")){
+
+    public static void contain() throws ExceptionABC {
+        if (text.contains("abc") || text.contains("ABC")) {
             System.out.println("текст содержит последовательность abc(ABC)");
-        }
-        else {
-            System.out.println("Текст не содержит последовательность abc(ABC)");
+        } else {
+            throw new ExceptionABC("текст содержит последовательность abc(ABC)");
         }
     }
-    public static void start(){
-        if (text.startsWith("555")){
+
+    public static void start() throws Exception555{
+        if (text.startsWith("555")) {
             System.out.println("текст начинается с 555");
-        }
-        else {
-            System.out.println("текст не начинается с 555");
+        } else {
+            throw new Exception555("текст не начинается с 555");
         }
     }
-    public static void end(){
-        if (text.endsWith("1a2b")){
+
+    public static void end() throws Exception1a2b{
+        if (text.endsWith("1a2b")) {
             System.out.println("текст заканчивается с 1a2b");
-        }
-        else {
-            System.out.println("текст не заканчивается с 1a2b");
+        } else {
+            throw new Exception1a2b("текст не заканчивается с 1a2b");
         }
     }
 }
